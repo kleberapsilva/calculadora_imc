@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: Home(),
   ));
 }
@@ -82,7 +83,7 @@ class _HomeState extends State<Home> {
                   style: TextStyle(color: Colors.green, fontSize: 25.0),
                   controller: weightController,
                   validator: (value) {
-                    if(value.isEmpty){
+                    if (value.isEmpty) {
                       return "Insira seu Peso!";
                     }
                   },
@@ -96,7 +97,7 @@ class _HomeState extends State<Home> {
                   style: TextStyle(color: Colors.green, fontSize: 25.0),
                   controller: heightController,
                   validator: (value) {
-                    if(value.isEmpty){
+                    if (value.isEmpty) {
                       return "Insira seu Altura!";
                     }
                   },
@@ -107,7 +108,7 @@ class _HomeState extends State<Home> {
                     height: 50.0,
                     child: RaisedButton(
                       onPressed: () {
-                        if(_formkey.currentState.validate()){
+                        if (_formkey.currentState.validate()) {
                           _calculate();
                         }
                       },
